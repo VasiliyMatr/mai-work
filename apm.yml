@@ -1,0 +1,33 @@
+name: mai-work
+version: 0.1.0
+description: My AI configuration - skills, MCP servers and tooling for agentic coding across Claude Code, Codex and OpenCode.
+author: VasiliyMatr <vasiliymatrenin@gmail.com>
+license: MIT
+
+target:
+  - claude
+  - codex
+  - opencode
+
+dependencies:
+  apm:
+    # Agentic dev methodology: brainstorming, plans, subagent-driven
+    # development, systematic debugging, TDD, verification-before-completion.
+    - obra/superpowers#v6.2.0
+
+    # Output-token compression; also compresses MCP tool descriptions.
+    - JuliusBrussee/caveman#v1.9.1
+
+  mcp:
+    # Semantic code intelligence over LSP (40+ languages incl. C/C++ via clangd).
+    # Self-defined, not registry: upstream warns registry entries are outdated.
+    # Needs `serena` on PATH: uv tool install -p 3.13 serena-agent && serena init
+    - name: serena
+      registry: false
+      transport: stdio
+      command: serena
+      args:
+        - start-mcp-server
+        # Harness-neutral: APM emits one MCP config for all targets.
+        - --context=agent
+        - --project-from-cwd
