@@ -1,0 +1,5 @@
+name: mai-authorship
+version: 0.1.0
+description: Attribution - one human authorship identity for author, copyright, and credit fields, plus AI co-authorship trailers on commits.
+author: Vasilii Matrenin <vasiliymatrenin@gmail.com>
+license: MIT

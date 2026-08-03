@@ -1,7 +1,7 @@
 name: mai-work
 version: 0.1.0
 description: My AI configuration - skills, MCP servers and tooling for agentic coding across Claude Code, Codex and OpenCode.
-author: VasiliyMatr <vasiliymatrenin@gmail.com>
+author: Vasilii Matrenin <vasiliymatrenin@gmail.com>
 license: MIT
 
 target:
@@ -11,6 +11,12 @@ target:
 
 dependencies:
   apm:
+    # First-party packs, one per concern group. Local path deps: edited in
+    # place, no tag cycle. Comment a line out to disable that group.
+    # Any pack can graduate to its own repo unchanged - see packs/*/README.md.
+    - ./packs/personal
+    - ./packs/authorship
+
     # Agentic dev methodology: brainstorming, plans, subagent-driven
     # development, systematic debugging, TDD, verification-before-completion.
     - obra/superpowers#v6.2.0

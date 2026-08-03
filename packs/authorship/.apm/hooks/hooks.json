@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/.apm/hooks/authorship-context.sh\"",
+            "timeout": 5,
+            "statusMessage": "Resolving authorship identity..."
+          }
+        ]
+      }
+    ]
+  }
+}

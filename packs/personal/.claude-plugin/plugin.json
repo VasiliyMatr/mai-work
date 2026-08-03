@@ -1,0 +1,16 @@
+{
+  "name": "mai-personal",
+  "description": "Personal working preferences - response language, terminology discipline, wording feedback, request validation.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Vasilii Matrenin",
+    "email": "vasiliymatrenin@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "preferences",
+    "instructions",
+    "language",
+    "terminology"
+  ]
+}

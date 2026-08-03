@@ -1,7 +1,49 @@
 lockfile_version: '1'
-generated_at: '2026-08-03T11:09:29.366466+00:00'
+generated_at: '2026-08-03T15:03:04.017695+00:00'
 apm_version: 0.27.0
 dependencies:
+- repo_url: _local/authorship
+  name: mai-authorship
+  version: 0.1.0
+  package_type: marketplace_plugin
+  deployed_files:
+  - .claude/commands/authorship-setup.md
+  - .claude/hooks/authorship/.apm/hooks/authorship-context.sh
+  - .claude/rules/authorship.md
+  - .claude/rules/commit-attribution.md
+  - .codex/hooks/authorship/.apm/hooks/authorship-context.sh
+  - .opencode/commands/authorship-setup.md
+  deployed_file_hashes:
+    .claude/commands/authorship-setup.md: sha256:426ce17564ec390d5f49daa3f8d4c352d10fc0039dd1ce5203a312b4bc2a2d1a
+    .claude/hooks/authorship/.apm/hooks/authorship-context.sh: sha256:6d9201b60f7401132ce73defb7050b7a7d6aed9aadd142b9e611275e32b13d75
+    .claude/rules/authorship.md: sha256:268c881715a120540761b465b566516347b3512687fb8d84b4c1da349740c48c
+    .claude/rules/commit-attribution.md: sha256:727ff1ca642c63c6c3caaf040d0661e346c88da4825cfe7087cf9919fc61a16c
+    .codex/hooks/authorship/.apm/hooks/authorship-context.sh: sha256:6d9201b60f7401132ce73defb7050b7a7d6aed9aadd142b9e611275e32b13d75
+    .opencode/commands/authorship-setup.md: sha256:426ce17564ec390d5f49daa3f8d4c352d10fc0039dd1ce5203a312b4bc2a2d1a
+  source: local
+  local_path: ./packs/authorship
+  declared_license: MIT
+- repo_url: _local/personal
+  name: mai-personal
+  version: 0.1.0
+  package_type: marketplace_plugin
+  deployed_files:
+  - .claude/hooks/personal/.apm/hooks/lingofix-reminder.sh
+  - .claude/rules/languages.md
+  - .claude/rules/lingofix.md
+  - .claude/rules/request-validation.md
+  - .claude/rules/terminology.md
+  - .codex/hooks/personal/.apm/hooks/lingofix-reminder.sh
+  deployed_file_hashes:
+    .claude/hooks/personal/.apm/hooks/lingofix-reminder.sh: sha256:cdf8ad80bf8eadd3fee3f50e7ce8c5c44708ed2ea1788ddea6a2fbe3be1e4793
+    .claude/rules/languages.md: sha256:c7b98ab345b1334c78a5ad9a27b120358797fa03a60862d707bb10c577c3bf9b
+    .claude/rules/lingofix.md: sha256:32edfdfc9edc90404dfb00d79962fe8d41ccc2f959dcff4f1587a0f9042ea41a
+    .claude/rules/request-validation.md: sha256:14ed04bc2f6b3a5c29c8c99123f4379b2e47b212f119b556b35a6df3e5aaa1a6
+    .claude/rules/terminology.md: sha256:51d47ec518a1faef2451b0a7eb528c45613e7ad8d7bac71f4382cef7d8278858
+    .codex/hooks/personal/.apm/hooks/lingofix-reminder.sh: sha256:cdf8ad80bf8eadd3fee3f50e7ce8c5c44708ed2ea1788ddea6a2fbe3be1e4793
+  source: local
+  local_path: ./packs/personal
+  declared_license: MIT
 - repo_url: juliusbrussee/caveman
   materialization_repo_url: JuliusBrussee/caveman
   name: caveman
@@ -486,6 +528,15 @@ deployments:
   content_hash: sha256:ae45346edae2cdb97018a38ebdcb79b162c59875cac2921d976a7d7540e4df70
 - kind: project-relative
   target: claude
+  value: .claude/commands/authorship-setup.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/authorship
+  active_owner: ./packs/authorship
+  content_hash: sha256:426ce17564ec390d5f49daa3f8d4c352d10fc0039dd1ce5203a312b4bc2a2d1a
+- kind: project-relative
+  target: claude
   value: .claude/commands/caveman-commit.md
   runtime: null
   scope: project
@@ -529,6 +580,15 @@ deployments:
   - juliusbrussee/caveman
   active_owner: juliusbrussee/caveman
   content_hash: sha256:ad76d3c75aed39f83efc5ab08b6f204ddc9b7cdda4fb56f60b6151ffc5d18b5b
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/authorship/.apm/hooks/authorship-context.sh
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/authorship
+  active_owner: ./packs/authorship
+  content_hash: sha256:6d9201b60f7401132ce73defb7050b7a7d6aed9aadd142b9e611275e32b13d75
 - kind: project-relative
   target: claude
   value: .claude/hooks/caveman/src/hooks/README.md
@@ -657,6 +717,15 @@ deployments:
   content_hash: sha256:ba47365cfb88ed35a481ad75534410548a4c79c0d47dd146ea424e6e1dea4879
 - kind: project-relative
   target: claude
+  value: .claude/hooks/personal/.apm/hooks/lingofix-reminder.sh
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:cdf8ad80bf8eadd3fee3f50e7ce8c5c44708ed2ea1788ddea6a2fbe3be1e4793
+- kind: project-relative
+  target: claude
   value: .claude/hooks/superpowers/hooks/run-hook.cmd
   runtime: null
   scope: project
@@ -673,6 +742,60 @@ deployments:
   - obra/superpowers
   active_owner: obra/superpowers
   content_hash: sha256:88a060272ca8047e0d1cd73a016e1cebba8396807a44be1e296d7c02dcbb9934
+- kind: project-relative
+  target: claude
+  value: .claude/rules/authorship.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/authorship
+  active_owner: ./packs/authorship
+  content_hash: sha256:268c881715a120540761b465b566516347b3512687fb8d84b4c1da349740c48c
+- kind: project-relative
+  target: claude
+  value: .claude/rules/commit-attribution.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/authorship
+  active_owner: ./packs/authorship
+  content_hash: sha256:727ff1ca642c63c6c3caaf040d0661e346c88da4825cfe7087cf9919fc61a16c
+- kind: project-relative
+  target: claude
+  value: .claude/rules/languages.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:c7b98ab345b1334c78a5ad9a27b120358797fa03a60862d707bb10c577c3bf9b
+- kind: project-relative
+  target: claude
+  value: .claude/rules/lingofix.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:32edfdfc9edc90404dfb00d79962fe8d41ccc2f959dcff4f1587a0f9042ea41a
+- kind: project-relative
+  target: claude
+  value: .claude/rules/request-validation.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:14ed04bc2f6b3a5c29c8c99123f4379b2e47b212f119b556b35a6df3e5aaa1a6
+- kind: project-relative
+  target: claude
+  value: .claude/rules/terminology.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:51d47ec518a1faef2451b0a7eb528c45613e7ad8d7bac71f4382cef7d8278858
 - kind: project-relative
   target: claude
   value: .claude/skills/brainstorming
@@ -2376,6 +2499,15 @@ deployments:
   content_hash: sha256:702e95f6e15474a8ee4d7fc5c854a32e1b7f1174db8ccba13e0b5f3392466ad1
 - kind: project-relative
   target: codex
+  value: .codex/hooks/authorship/.apm/hooks/authorship-context.sh
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/authorship
+  active_owner: ./packs/authorship
+  content_hash: sha256:6d9201b60f7401132ce73defb7050b7a7d6aed9aadd142b9e611275e32b13d75
+- kind: project-relative
+  target: codex
   value: .codex/hooks/caveman/src/hooks/README.md
   runtime: null
   scope: project
@@ -2502,6 +2634,15 @@ deployments:
   content_hash: sha256:ba47365cfb88ed35a481ad75534410548a4c79c0d47dd146ea424e6e1dea4879
 - kind: project-relative
   target: codex
+  value: .codex/hooks/personal/.apm/hooks/lingofix-reminder.sh
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:cdf8ad80bf8eadd3fee3f50e7ce8c5c44708ed2ea1788ddea6a2fbe3be1e4793
+- kind: project-relative
+  target: codex
   value: .codex/hooks/superpowers/hooks/run-hook.cmd
   runtime: null
   scope: project
@@ -2572,6 +2713,15 @@ deployments:
   - juliusbrussee/caveman
   active_owner: juliusbrussee/caveman
   content_hash: sha256:ae45346edae2cdb97018a38ebdcb79b162c59875cac2921d976a7d7540e4df70
+- kind: project-relative
+  target: opencode
+  value: .opencode/commands/authorship-setup.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/authorship
+  active_owner: ./packs/authorship
+  content_hash: sha256:426ce17564ec390d5f49daa3f8d4c352d10fc0039dd1ce5203a312b4bc2a2d1a
 - kind: project-relative
   target: opencode
   value: .opencode/commands/caveman-commit.md
