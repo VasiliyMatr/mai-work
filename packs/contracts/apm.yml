@@ -1,0 +1,5 @@
+name: mai-contracts
+version: 0.1.0
+description: Contract-sensitive pre-flight and prepared-change audits with explicit provenance and user-owned decisions.
+author: Vasilii Matrenin <vasiliymatrenin@gmail.com>
+license: MIT

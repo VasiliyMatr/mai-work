@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-03T15:03:04.017695+00:00'
+generated_at: '2026-08-04T11:19:19.837145+00:00'
 apm_version: 0.27.0
 dependencies:
 - repo_url: _local/authorship
@@ -22,6 +22,29 @@ dependencies:
     .opencode/commands/authorship-setup.md: sha256:426ce17564ec390d5f49daa3f8d4c352d10fc0039dd1ce5203a312b4bc2a2d1a
   source: local
   local_path: ./packs/authorship
+  declared_license: MIT
+- repo_url: _local/contracts
+  name: mai-contracts
+  version: 0.1.0
+  package_type: apm_package
+  deployed_files:
+  - .claude/agents/contracts-preflight.md
+  - .claude/agents/contracts-review.md
+  - .claude/rules/contracts.md
+  - .codex/agents/contracts-preflight.toml
+  - .codex/agents/contracts-review.toml
+  - .opencode/agents/contracts-preflight.md
+  - .opencode/agents/contracts-review.md
+  deployed_file_hashes:
+    .claude/agents/contracts-preflight.md: sha256:c2785a6ee05935923014031dca7077189d1315825c40dd02dabd9b1ebbc19924
+    .claude/agents/contracts-review.md: sha256:f81065a0a2785570cd26d756ac3c2ede4f2138993a31af006f54e0652e48375b
+    .claude/rules/contracts.md: sha256:9c7357d2bf58f6e2d0cddcc36bf700981705bd6f1612ecc9335280c4e56b564f
+    .codex/agents/contracts-preflight.toml: sha256:819458d2d645d051b2b703d1013efa71160fca2b5d69cd437d16a0db61fe8d3a
+    .codex/agents/contracts-review.toml: sha256:39659db6a8a85a79e12c99123debd97a05d092ae68d74aea2da2b4bff7885320
+    .opencode/agents/contracts-preflight.md: sha256:c2785a6ee05935923014031dca7077189d1315825c40dd02dabd9b1ebbc19924
+    .opencode/agents/contracts-review.md: sha256:f81065a0a2785570cd26d756ac3c2ede4f2138993a31af006f54e0652e48375b
+  source: local
+  local_path: ./packs/contracts
   declared_license: MIT
 - repo_url: _local/personal
   name: mai-personal
@@ -528,6 +551,24 @@ deployments:
   content_hash: sha256:ae45346edae2cdb97018a38ebdcb79b162c59875cac2921d976a7d7540e4df70
 - kind: project-relative
   target: claude
+  value: .claude/agents/contracts-preflight.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/contracts
+  active_owner: ./packs/contracts
+  content_hash: sha256:c2785a6ee05935923014031dca7077189d1315825c40dd02dabd9b1ebbc19924
+- kind: project-relative
+  target: claude
+  value: .claude/agents/contracts-review.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/contracts
+  active_owner: ./packs/contracts
+  content_hash: sha256:f81065a0a2785570cd26d756ac3c2ede4f2138993a31af006f54e0652e48375b
+- kind: project-relative
+  target: claude
   value: .claude/commands/authorship-setup.md
   runtime: null
   scope: project
@@ -760,6 +801,15 @@ deployments:
   - ./packs/authorship
   active_owner: ./packs/authorship
   content_hash: sha256:727ff1ca642c63c6c3caaf040d0661e346c88da4825cfe7087cf9919fc61a16c
+- kind: project-relative
+  target: claude
+  value: .claude/rules/contracts.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/contracts
+  active_owner: ./packs/contracts
+  content_hash: sha256:9c7357d2bf58f6e2d0cddcc36bf700981705bd6f1612ecc9335280c4e56b564f
 - kind: project-relative
   target: claude
   value: .claude/rules/languages.md
@@ -2499,6 +2549,24 @@ deployments:
   content_hash: sha256:702e95f6e15474a8ee4d7fc5c854a32e1b7f1174db8ccba13e0b5f3392466ad1
 - kind: project-relative
   target: codex
+  value: .codex/agents/contracts-preflight.toml
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/contracts
+  active_owner: ./packs/contracts
+  content_hash: sha256:819458d2d645d051b2b703d1013efa71160fca2b5d69cd437d16a0db61fe8d3a
+- kind: project-relative
+  target: codex
+  value: .codex/agents/contracts-review.toml
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/contracts
+  active_owner: ./packs/contracts
+  content_hash: sha256:39659db6a8a85a79e12c99123debd97a05d092ae68d74aea2da2b4bff7885320
+- kind: project-relative
+  target: codex
   value: .codex/hooks/authorship/.apm/hooks/authorship-context.sh
   runtime: null
   scope: project
@@ -2713,6 +2781,24 @@ deployments:
   - juliusbrussee/caveman
   active_owner: juliusbrussee/caveman
   content_hash: sha256:ae45346edae2cdb97018a38ebdcb79b162c59875cac2921d976a7d7540e4df70
+- kind: project-relative
+  target: opencode
+  value: .opencode/agents/contracts-preflight.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/contracts
+  active_owner: ./packs/contracts
+  content_hash: sha256:c2785a6ee05935923014031dca7077189d1315825c40dd02dabd9b1ebbc19924
+- kind: project-relative
+  target: opencode
+  value: .opencode/agents/contracts-review.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/contracts
+  active_owner: ./packs/contracts
+  content_hash: sha256:f81065a0a2785570cd26d756ac3c2ede4f2138993a31af006f54e0652e48375b
 - kind: project-relative
   target: opencode
   value: .opencode/commands/authorship-setup.md

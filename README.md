@@ -37,6 +37,7 @@ working directory.
 |---|---|
 | [`packs/personal`](packs/personal) | Response language, terminology discipline, wording feedback, request validation |
 | [`packs/authorship`](packs/authorship) | Attribution: one human identity for `author`, copyright, and credit fields, configured once per user via `/authorship-setup`; AI `Co-Authored-By` trailer on commits, decided once per session |
+| [`packs/contracts`](packs/contracts) | Contract-sensitive pre-flight and prepared-change audits with provenance, explicit assumptions, and user-owned decisions |
 
 Packs are local path dependencies, edited in place with no tag cycle. Disable one
 by commenting out its line in `apm.yml` and re-running `apm install`. Any pack can

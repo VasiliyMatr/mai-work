@@ -16,6 +16,7 @@ dependencies:
     # Any pack can graduate to its own repo unchanged - see packs/*/README.md.
     - ./packs/personal
     - ./packs/authorship
+    - ./packs/contracts
 
     # Agentic dev methodology: brainstorming, plans, subagent-driven
     # development, systematic debugging, TDD, verification-before-completion.
