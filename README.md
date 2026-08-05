@@ -31,6 +31,49 @@ dependencies:
 Then `apm install` deploys the manifests and `apm compile` regenerates
 `AGENTS.md` / `CLAUDE.md` for the project's harnesses.
 
+### Migrating an existing AGENTS.md or CLAUDE.md
+
+If the project already has hand-written `AGENTS.md` / `CLAUDE.md`, move that
+content into an APM instructions primitive instead of keeping it at the root:
+
+```yaml
+name: my-project
+includes: auto                        # consent to publish local .apm/ instructions
+dependencies:
+  apm:
+    - VasiliyMatr/mai-work
+```
+
+Move the content to `.apm/instructions/project.instructions.md`:
+
+```markdown
+---
+description: Project-specific conventions.
+---
+
+# Project conventions
+
+- Run the tests before committing.
+```
+
+`apm install` deploys the instruction to each harness and `apm compile` folds
+it into the generated `AGENTS.md` / `CLAUDE.md` together with mai's rules,
+replacing the hand-edited root files.
+
+To keep hand-written sections in `AGENTS.md` that APM must not touch, use
+managed-section mode instead:
+
+```yaml
+compilation:
+  agents_md:
+    mode: managed_section
+```
+
+APM only rewrites the block between the `<!-- apm:start -->` and
+`<!-- apm:end -->` markers, leaving everything else intact. The file must
+already exist and contain both markers exactly once before the first managed
+compile; missing or duplicate markers raise an error.
+
 ## Layout
 
 | Path            | Contents                                               |
