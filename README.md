@@ -48,8 +48,26 @@ graduate to its own repository unchanged.
 | Package | Purpose |
 |---|---|
 | [obra/superpowers](https://github.com/obra/superpowers) | Agentic development methodology: brainstorming, plans, subagent-driven development, systematic debugging, TDD |
-| [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | Output-token compression; also compresses MCP tool descriptions |
+| [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | Output-token compression on Claude Code only |
 | [oraios/serena](https://github.com/oraios/serena) | Semantic code intelligence over LSP (MCP), 40+ languages including C/C++ via clangd |
+
+### Caveman target policy
+
+Caveman is installed in full on Claude Code and is not installed on Codex or
+OpenCode. This is a fail-closed compatibility policy:
+
+| Target | Caveman | Cavecrew agents | Hooks and commands |
+|---|---|---|---|
+| Claude Code | Full v1.9.1 package | Upstream agents with native tool allowlists | Upstream set |
+| Codex | Not installed | None | None |
+| OpenCode | Not installed | None | None |
+
+APM 0.27.0 drops Caveman's Claude-style `tools` allowlists while generating
+Codex agents, which would let those agents inherit the parent sandbox and MCP
+surface, including Serena. OpenCode rejects the same list-shaped metadata.
+For this reason, Caveman is enabled only for Claude Code. APM also cannot
+cleanly install Caveman skills for Codex or OpenCode alongside the full
+Claude-only package.
 
 Serena needs the `serena` binary on `PATH`:
 

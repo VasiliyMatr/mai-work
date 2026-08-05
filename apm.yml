@@ -22,8 +22,12 @@ dependencies:
     # development, systematic debugging, TDD, verification-before-completion.
     - obra/superpowers#v6.2.0
 
-    # Output-token compression; also compresses MCP tool descriptions.
-    - JuliusBrussee/caveman#v1.9.1
+    # Full Caveman package stays on Claude, whose native agent allowlists and
+    # hooks preserve upstream behavior.
+    - git: https://github.com/JuliusBrussee/caveman.git
+      ref: v1.9.1
+      targets:
+        - claude
 
   mcp:
     # Semantic code intelligence over LSP (40+ languages incl. C/C++ via clangd).
