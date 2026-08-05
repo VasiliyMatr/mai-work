@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-08-05T09:15:20.037131+00:00'
+generated_at: '2026-08-05T12:50:19.091774+00:00'
 apm_version: 0.27.0
 dependencies:
 - repo_url: _local/authorship
@@ -51,18 +51,32 @@ dependencies:
   version: 0.1.0
   package_type: marketplace_plugin
   deployed_files:
+  - .agents/skills/aligned-markdown-tables
+  - .agents/skills/aligned-markdown-tables/SKILL.md
+  - .agents/skills/aligned-markdown-tables/scripts/.gitignore
+  - .agents/skills/aligned-markdown-tables/scripts/align-tables.py
   - .claude/hooks/personal/.apm/hooks/lingofix-reminder.sh
   - .claude/rules/languages.md
   - .claude/rules/lingofix.md
   - .claude/rules/request-validation.md
   - .claude/rules/terminology.md
+  - .claude/skills/aligned-markdown-tables
+  - .claude/skills/aligned-markdown-tables/SKILL.md
+  - .claude/skills/aligned-markdown-tables/scripts/.gitignore
+  - .claude/skills/aligned-markdown-tables/scripts/align-tables.py
   - .codex/hooks/personal/.apm/hooks/lingofix-reminder.sh
   deployed_file_hashes:
+    .agents/skills/aligned-markdown-tables/SKILL.md: sha256:a0b621e113fe7747f4cdf2917fc9ea703a6d29099f163f9a2e4c53fd67ce53bf
+    .agents/skills/aligned-markdown-tables/scripts/.gitignore: sha256:862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793
+    .agents/skills/aligned-markdown-tables/scripts/align-tables.py: sha256:5a19a2387ac7bf500258ce457a65223e8e8801c2ed943a6a4605938022db251a
     .claude/hooks/personal/.apm/hooks/lingofix-reminder.sh: sha256:cdf8ad80bf8eadd3fee3f50e7ce8c5c44708ed2ea1788ddea6a2fbe3be1e4793
     .claude/rules/languages.md: sha256:c7b98ab345b1334c78a5ad9a27b120358797fa03a60862d707bb10c577c3bf9b
     .claude/rules/lingofix.md: sha256:32edfdfc9edc90404dfb00d79962fe8d41ccc2f959dcff4f1587a0f9042ea41a
     .claude/rules/request-validation.md: sha256:14ed04bc2f6b3a5c29c8c99123f4379b2e47b212f119b556b35a6df3e5aaa1a6
     .claude/rules/terminology.md: sha256:51d47ec518a1faef2451b0a7eb528c45613e7ad8d7bac71f4382cef7d8278858
+    .claude/skills/aligned-markdown-tables/SKILL.md: sha256:a0b621e113fe7747f4cdf2917fc9ea703a6d29099f163f9a2e4c53fd67ce53bf
+    .claude/skills/aligned-markdown-tables/scripts/.gitignore: sha256:862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793
+    .claude/skills/aligned-markdown-tables/scripts/align-tables.py: sha256:5a19a2387ac7bf500258ce457a65223e8e8801c2ed943a6a4605938022db251a
     .codex/hooks/personal/.apm/hooks/lingofix-reminder.sh: sha256:cdf8ad80bf8eadd3fee3f50e7ce8c5c44708ed2ea1788ddea6a2fbe3be1e4793
   source: local
   local_path: ./packs/personal
@@ -747,6 +761,42 @@ deployments:
   - ./packs/personal
   active_owner: ./packs/personal
   content_hash: sha256:51d47ec518a1faef2451b0a7eb528c45613e7ad8d7bac71f4382cef7d8278858
+- kind: project-relative
+  target: claude
+  value: .claude/skills/aligned-markdown-tables
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/aligned-markdown-tables/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:a0b621e113fe7747f4cdf2917fc9ea703a6d29099f163f9a2e4c53fd67ce53bf
+- kind: project-relative
+  target: claude
+  value: .claude/skills/aligned-markdown-tables/scripts/.gitignore
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793
+- kind: project-relative
+  target: claude
+  value: .claude/skills/aligned-markdown-tables/scripts/align-tables.py
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:5a19a2387ac7bf500258ce457a65223e8e8801c2ed943a6a4605938022db251a
 - kind: project-relative
   target: claude
   value: .claude/skills/brainstorming
@@ -1584,6 +1634,42 @@ deployments:
   - obra/superpowers
   active_owner: obra/superpowers
   content_hash: sha256:c711346852c911b24a84aa161e0cff06a4cd7f4e2fa9e9c0a266cead5afcbade
+- kind: project-relative
+  target: codex
+  value: .agents/skills/aligned-markdown-tables
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/aligned-markdown-tables/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:a0b621e113fe7747f4cdf2917fc9ea703a6d29099f163f9a2e4c53fd67ce53bf
+- kind: project-relative
+  target: codex
+  value: .agents/skills/aligned-markdown-tables/scripts/.gitignore
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793
+- kind: project-relative
+  target: codex
+  value: .agents/skills/aligned-markdown-tables/scripts/align-tables.py
+  runtime: null
+  scope: project
+  owners:
+  - ./packs/personal
+  active_owner: ./packs/personal
+  content_hash: sha256:5a19a2387ac7bf500258ce457a65223e8e8801c2ed943a6a4605938022db251a
 - kind: project-relative
   target: codex
   value: .agents/skills/brainstorming

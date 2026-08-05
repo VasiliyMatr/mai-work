@@ -8,13 +8,14 @@ own APM package — nothing here depends on the parent repo.
 
 ## Contents
 
-| Primitive | File | Effect |
-|---|---|---|
-| instruction | `languages` | Reply language follows the user; artifacts always English |
-| instruction | `terminology` | Precise terms, ambiguity resolved out loud, three-tier term store |
-| instruction | `lingofix` | Optional footer reporting wording errors in the user's messages |
-| instruction | `request-validation` | Pre-flight checks for contradictions, reinvention, wrong layer |
-| hook | `lingofix-reminder.sh` | `UserPromptSubmit`; restates LingoFix on/off each turn |
+| Primitive   | File                      | Effect                                                                    |
+| ---         | ---                       | ---                                                                       |
+| instruction | `languages`               | Reply language follows the user; artifacts always English                 |
+| instruction | `terminology`             | Precise terms, ambiguity resolved out loud, three-tier term store         |
+| instruction | `lingofix`                | Optional footer reporting wording errors in the user's messages           |
+| instruction | `request-validation`      | Pre-flight checks for contradictions, reinvention, wrong layer            |
+| hook        | `lingofix-reminder.sh`    | `UserPromptSubmit`; restates LingoFix on/off each turn                    |
+| skill       | `aligned-markdown-tables` | Keeps pipe-table columns aligned in raw Markdown; ships `align-tables.py` |
 
 Instructions deploy natively to `.claude/rules/` and reach Codex and OpenCode
 through `apm compile` (`AGENTS.md`). The hook reaches Claude Code and Codex;

@@ -9,11 +9,11 @@ without depending on parent-repository files.
 
 ## Contents
 
-| Primitive | File | Effect |
-|---|---|---|
-| instruction | `contracts` | Routes contract-sensitive work through required pre-flight and prepared-change audits |
-| agent | `contracts-preflight` | Establishes contract provenance, unknowns, assumptions, and required user decisions before work begins |
-| agent | `contracts-review` | Checks prepared code, configuration, tests, documentation, and commit claims against relevant contracts |
+| Primitive   | File                  | Effect |
+| ---         | ---                   | --- |
+| instruction | `contracts`           | Routes contract-sensitive work through required pre-flight and prepared-change audits |
+| agent       | `contracts-preflight` | Establishes contract provenance, unknowns, assumptions, and required user decisions before work begins |
+| agent       | `contracts-review`    | Checks prepared code, configuration, tests, documentation, and commit claims against relevant contracts |
 
 ## Audit flow
 

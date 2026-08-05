@@ -7,12 +7,12 @@ identity is per-user and persisted, AI credit is per-session and ephemeral.
 
 ## Contents
 
-| Primitive | File | Effect |
-|---|---|---|
-| instruction | `authorship` | One human identity everywhere; never substitute a handle; never invent an email |
-| instruction | `commit-attribution` | Ask once per session whether commits carry an AI `Co-Authored-By` trailer |
-| hook | `authorship-context.sh` | `SessionStart`; injects `AUTHORSHIP: <name> <email>` or a setup nudge |
-| prompt | `authorship-setup.prompt.md` | `/authorship-setup` — the one-time human-identity dialog |
+| Primitive   | File                         | Effect                                                                          |
+| ---         | ---                          | ---                                                                             |
+| instruction | `authorship`                 | One human identity everywhere; never substitute a handle; never invent an email |
+| instruction | `commit-attribution`         | Ask once per session whether commits carry an AI `Co-Authored-By` trailer       |
+| hook        | `authorship-context.sh`      | `SessionStart`; injects `AUTHORSHIP: <name> <email>` or a setup nudge           |
+| prompt      | `authorship-setup.prompt.md` | `/authorship-setup` — the one-time human-identity dialog                        |
 
 ## Human identity
 
