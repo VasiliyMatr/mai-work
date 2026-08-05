@@ -12,11 +12,11 @@ file, no renderer required.
 
 - Non-last columns are always padded to their widest cell.
 - The last column is padded only when it is safe to do so:
-  - **Outlier guard** — no single cell is much longer than the rest. Padded
-    only when `widest ≤ 2 × second-widest` (a lone enormous cell would force
+  - **Outlier guard** -- no single cell is much longer than the rest. Padded
+    only when `widest <= 2 x second-widest` (a lone enormous cell would force
     every row to its width).
-  - **Width cap** — the widest cell is ≤ 80 characters. A uniformly long prose
-    column padded just adds trailing whitespace.
+  - **Width cap** -- the widest cell is at most 80 characters. A uniformly long
+    prose column padded just adds trailing whitespace.
 
 Otherwise the last column stays trimmed (single space before the closing `|`).
 This keeps long `Contents`/`Purpose`-style columns from bloating the document.
@@ -49,9 +49,9 @@ The script is idempotent: running it on an already-aligned file is a no-op.
 
 - **Padding the last column blindly.** Short tables look fine, but a table
   whose last column holds one very long cell or uniformly long prose turns into
-  a wall of trailing whitespace. Apply the two guards — if in doubt, leave the
+  a wall of trailing whitespace. Apply the two guards -- if in doubt, leave the
   last column trimmed.
 - **Hand-aligning after every edit.** Use the script instead; it recomputes
   widths from the current content.
 - **Running on files with tables inside code fences.** Expected behavior is to
-  skip them — the script already does.
+  skip them -- the script already does.

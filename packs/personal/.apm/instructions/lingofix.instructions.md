@@ -22,7 +22,7 @@ Last line of the response, after a `---` separator:
 
 ```
 ---
-*wording:* "recieve" -> "receive" · "depends on" (not "depends from")
+*wording:* "recieve" -> "receive" | "depends on" (not "depends from")
 ```
 
 - At most 2 items. Pick the two most useful.

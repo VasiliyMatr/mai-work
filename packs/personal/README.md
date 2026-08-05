@@ -4,7 +4,7 @@ Personal working preferences, deployed to every harness through APM.
 
 Consumed as a local path dependency from the repo root `apm.yml`. The pack is
 self-contained: to reuse it elsewhere, copy this directory or publish it as its
-own APM package — nothing here depends on the parent repo.
+own APM package -- nothing here depends on the parent repo.
 
 ## Contents
 
@@ -27,12 +27,12 @@ Two APM behaviours these files depend on:
 
 - **No `applyTo` in instruction frontmatter.** APM maps `applyTo` to the `paths`
   field of the emitted `.claude/rules/*.md`, and Claude Code treats a rule with
-  `paths` as *path-scoped* — it loads only when a matching file is read, not at
+  `paths` as *path-scoped* -- it loads only when a matching file is read, not at
   session start. Omitting `applyTo` emits a bare rule that loads
   unconditionally, and compiles into `## Global Instructions` in `AGENTS.md`.
   These preferences must apply from the first turn, so none of them set it.
 - **`${CLAUDE_PLUGIN_ROOT}` anchors at the package root, not at `.apm/`.**
-  APM resolves hook paths literally, relative to that root — there is no
+  APM resolves hook paths literally, relative to that root -- there is no
   `.apm/` stripping and no fallback search. Since every source file in these
   packs lives under `.apm/`, the hook payload does too, and the reference spells
   out `${CLAUDE_PLUGIN_ROOT}/.apm/hooks/<script>`. (Superpowers and caveman put

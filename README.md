@@ -3,7 +3,7 @@
 My AI configuration: skills, instructions, MCP servers, and tooling for agentic
 coding across Claude Code, Codex, and OpenCode.
 
-Author: Vasilii Matrenin <vasiliymatrenin@gmail.com> — GitHub
+Author: Vasilii Matrenin <vasiliymatrenin@gmail.com> -- GitHub
 [@VasiliyMatr](https://github.com/VasiliyMatr)
 
 Everything is declared once in [apm.yml](apm.yml) and compiled to each harness
@@ -20,7 +20,7 @@ dependencies:
     - VasiliyMatr/mai-work
 ```
 
-Pin it like any APM dependency — by tag, branch, or commit:
+Pin it like any APM dependency -- by tag, branch, or commit:
 
 ```yaml
 dependencies:
@@ -79,4 +79,4 @@ A fresh clone needs both before any harness picks up the configuration.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT -- see [LICENSE](LICENSE).

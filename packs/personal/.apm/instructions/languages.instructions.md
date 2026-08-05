@@ -1,5 +1,5 @@
 ---
-description: Response language selection, and the English-only rule for everything written to disk.
+description: Response language selection, and the English-only, ASCII-only rules for everything written to disk.
 ---
 
 # Languages
@@ -19,3 +19,10 @@ instructions, and any other file written to disk.
 This holds even when the conversation is in Russian. Never translate an artifact
 into the conversation language - explain it in the conversation language and
 leave the artifact in English.
+
+## Written artifacts - ASCII only
+
+Files written to disk use basic ASCII characters only. The symbols to avoid
+include the less-than-or-equal sign (use `<=`), em dashes (use `--`), smart
+or curly quotes (use straight quotes), and emojis. Nothing outside the ASCII
+range is allowed.

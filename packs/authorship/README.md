@@ -2,7 +2,7 @@
 
 Attribution: who gets credit for a piece of work, human and AI.
 
-Two rules with different lifetimes, kept in separate files on purpose — human
+Two rules with different lifetimes, kept in separate files on purpose -- human
 identity is per-user and persisted, AI credit is per-session and ephemeral.
 
 ## Contents
@@ -12,7 +12,7 @@ identity is per-user and persisted, AI credit is per-session and ephemeral.
 | instruction | `authorship`                 | One human identity everywhere; never substitute a handle; never invent an email |
 | instruction | `commit-attribution`         | Ask once per session whether commits carry an AI `Co-Authored-By` trailer       |
 | hook        | `authorship-context.sh`      | `SessionStart`; injects `AUTHORSHIP: <name> <email>` or a setup nudge           |
-| prompt      | `authorship-setup.prompt.md` | `/authorship-setup` — the one-time human-identity dialog                        |
+| prompt      | `authorship-setup.prompt.md` | `/authorship-setup` -- the one-time human-identity dialog                        |
 
 ## Human identity
 
@@ -44,7 +44,7 @@ No config file and no state on disk. The first commit request in a session asks
 whether to add the trailer; the answer holds for that session and a new session
 asks again.
 
-The trailer never hardcodes a model name — the agent uses its own identity from
+The trailer never hardcodes a model name -- the agent uses its own identity from
 the current request's system prompt. That is also the only workable option: the
 `model` field exists on `SessionStart` hooks alone, the documentation states it
 is not guaranteed to be present, and there is no `$CLAUDE_MODEL` environment
@@ -53,7 +53,7 @@ variable, so a hook cannot supply the name reliably.
 ## Harness coverage
 
 The hook reaches Claude Code and Codex. OpenCode has no hook support, so the
-`authorship` instruction tells the agent to resolve the identity itself — read
+`authorship` instruction tells the agent to resolve the identity itself -- read
 the config file, then fall back to `git config`. The `commit-attribution` rule
 needs no hook and works everywhere.
 
@@ -65,5 +65,5 @@ start), and hook paths in `hooks.json` resolve literally against the package
 root, where `${CLAUDE_PLUGIN_ROOT}` anchors. All sources here live under `.apm/`,
 so the payload does too and the reference reads
 `${CLAUDE_PLUGIN_ROOT}/.apm/hooks/authorship-context.sh`. A reference that
-disagrees with the script's actual location still installs — with a warning and
+disagrees with the script's actual location still installs -- with a warning and
 a dead hook.

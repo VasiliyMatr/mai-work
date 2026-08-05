@@ -5,8 +5,8 @@
 Before this change, `mai-work` deployed `JuliusBrussee/caveman#v1.9.1`
 through APM `0.27.0` to Claude Code, Codex, and OpenCode. Caveman's Cavecrew
 agents declare Claude-style `tools` allowlists. APM preserves those allowlists
-for Claude, emits them unchanged for OpenCode—which rejects them at load
-time—and drops them when transforming agents to Codex TOML.
+for Claude, emits them unchanged for OpenCode--which rejects them at load
+time--and drops them when transforming agents to Codex TOML.
 
 Codex custom-agent settings inherit from the parent session when omitted.
 The generated Cavecrew TOML therefore inherits the parent's sandbox and MCP
