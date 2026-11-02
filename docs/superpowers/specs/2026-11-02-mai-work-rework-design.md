@@ -18,15 +18,15 @@ current `.apm/` and pre-`e8a9239` roles/workflow; newer refinements take precede
 
 ## First-party inventory
 
-| Action | Features |
-| --- | --- |
-| Preserve | Language preferences, English/ASCII artifacts, authorship, optional AI attribution/LingoFix, aligned tables, Conventional Commits. |
-| Update | Request validation: simpler alternatives and support costs; respect reaffirmed intent and existing authorization. Contract audits: preserve provenance and user-owned decisions, avoid duplicate reviews. |
-| Backport | Implementer/reviewer/fixer separation; evidence-based handoffs; local-fix versus redesign routing; final combined-result review. |
-| Backport | Simple implementations, explicit spec/code/test conflicts, focused changes, preserved user work, verified completion claims. |
-| Backport | Readable behavioral tests, minimal structural checks, deterministic synchronization; no rerun-until-pass or weakened assertions. Documentation explains intent and guarantees without trivial commentary. |
+| Action          | Features |
+| ---             | --- |
+| Preserve        | Language preferences, English/ASCII artifacts, authorship, optional AI attribution/LingoFix, aligned tables, Conventional Commits. |
+| Update          | Request validation: simpler alternatives and support costs; respect reaffirmed intent and existing authorization. Contract audits: preserve provenance and user-owned decisions, avoid duplicate reviews. |
+| Backport        | Implementer/reviewer/fixer separation; evidence-based handoffs; local-fix versus redesign routing; final combined-result review. |
+| Backport        | Simple implementations, explicit spec/code/test conflicts, focused changes, preserved user work, verified completion claims. |
+| Backport        | Readable behavioral tests, minimal structural checks, deterministic synchronization; no rerun-until-pass or weakened assertions. Documentation explains intent and guarantees without trivial commentary. |
 | Backport/update | Pinned tooling, reproducible install/compile/audit, generated-file ownership, harness coverage; revalidate historical APM workarounds. |
-| Add/replace | Two reviewer families; replace tiered terminology promotion with purposeful Serena memories. |
+| Add/replace     | Two reviewer families; replace tiered terminology promotion with purposeful Serena memories. |
 
 ## Review integration
 
